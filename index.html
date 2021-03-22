@@ -63,10 +63,10 @@ document.cookie = 'kex=1';
 <br>
 <h1 style="font-size:20px;text-align:center;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
 <div style="text-align:center">
-<button class="btn btn-main" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_hen()> HEN v2.1.3 </button>
-<button class="btn btn-main" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_hen2()> HEN-U </button>
-<button class="btn btn-main" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_mira()> MIRA </button>
-<button class="btn btn-main" onmouseover="mainpayload4()" onmouseout="pagetitle()" onclick=load_mirahen()> MIRA-HEN </button>
+<button class="btn btn-main" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen()> GoldHEN </button>
+<button class="btn btn-main" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_hen()> HEN v2.1.3 </button>
+<button class="btn btn-main" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_hen2()> HEN-U </button>
+<button class="btn btn-main" onmouseover="mainpayload4()" onmouseout="pagetitle()" onclick=load_mira()> MIRA </button>
 <br><br>
 <h1 style="font-size:20px;text-align:center;">Payloads</h1>
 <button class="btn btn-main" onmouseover="todex()" onmouseout="pagetitle()" onclick=load_todex()> ToDex </button>
@@ -99,16 +99,16 @@ document.cookie = 'kex=1';
 </div>
 <script>
 function mainpayload1(){
-document.getElementById("msgs").innerHTML = "HEN v2.1.3 for Firmware 7.02";
+document.getElementById("msgs").innerHTML = "GoldHEN for Firmware 7.02";
 }
 function mainpayload2(){
-document.getElementById("msgs").innerHTML = "HEN + ToDex 0x80 (Includes Temporary Fix for CE-30391-6)";
+document.getElementById("msgs").innerHTML = "HEN v2.1.3 for Firmware 7.02";
 }
 function mainpayload3(){
-document.getElementById("msgs").innerHTML = "MIRA for Firmware 7.02";
+document.getElementById("msgs").innerHTML = "HEN + ToDex 0x80 (Includes Temporary Fix for CE-30391-6)";
 }
 function mainpayload4(){
-document.getElementById("msgs").innerHTML = "MIRA + ToDex (Includes Temporary Fix for CE-30391-6)";
+document.getElementById("msgs").innerHTML = "MIRA for Firmware 7.02";
 }
 function todex(){
 document.getElementById("msgs").innerHTML = "Enable Some Debugging Functions Available on TestKit";
@@ -183,6 +183,13 @@ for(var i=50; i<=75; i=i+5){
 }
 tempC.value=60;
 
+function load_goldhen(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload702.html#f=goldhen_702.js';
+        link.click();
+}
 function load_hen(){
 
   var link = document.createElement('a');
