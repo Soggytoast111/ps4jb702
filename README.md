@@ -14,3 +14,6 @@ Note: When Initiating a Payload you will experience Insufficient Memory Alerts i
 
 - [sleirsgoevy](https://github.com/sleirsgoevy)
 - [ChendoChap](https://github.com/ChendoChap)
+
+## Special thanks
+- [hippie68](https://github.com/hippie68
