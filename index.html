@@ -4,52 +4,49 @@
 <style>
 html, body {
 background-image: url('img.jpg');
-background-attachment: fixed;
-background-size:100%;
-background-repeat:no-repeat;
+background-size: 100%;
+background-repeat: no-repeat;
 background-color: #305fa5;
-color:white;
-margin-top: 0px;
-margin-left: 0px;
-margin-right: 0px;
+color: white;
+margin: 0px;
 overflow: hidden;
 }
 h1 {
 text-shadow: 0.1em 0.1em 0.2em black;
-font-size:25px;
-text-align:center;
-color:white;
+font-size: 25px;
+text-align: center;
+color: white;
+}
+#main-section {
+text-align: center;
+display: block;
+}
+#mods-section {
+text-align: center;
+display: none;
 }
 .btn {
-width: 262px;
+background-color: #003263;
+color: white;
+width: 260px;
 height: 49px;
-padding-top: 10px;
-padding-bottom: 13px;
+padding-bottom: 5px;
 text-align: center;
-text-decoration: none;
-display: inline-block;
 font-size: 20px;
-margin-top: 15px;
-margin-bottom: 5px;
-margin-left: 15px;
-margin-right: 5px;
+margin-top: 8px;
+margin-bottom: 8px;
+margin-left: 8px;
+margin-right: 8px;
 border-bottom-width: 0px;
 border-right-width: 0px;
 border-top-width: 0px;
 border-left-width: 0px;
--webkit-transition-duration: 0.4s;
 transition-duration: 0.4s;
 cursor: pointer;
-}
-.btn-main {
-background-color: #003263;
-color: white;
 border-radius: 8px;
 }
-.btn-main:hover {
+.btn:hover {
 background-color: #0058b1;
-color: white;
-    border-radius: 8px;
 }
 </style>
 <script>
@@ -58,54 +55,75 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 document.cookie = 'kex=1';
 </script>
 </head>
+<div id="main-section">
 <h1 id=msgs>PS4 7.02 Host v1.4 by GamerHack</h1>
 <hr>
 <br>
-<h1 style="font-size:20px;text-align:center;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
-<div style="text-align:center">
-<button class="btn btn-main" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen()> GoldHEN v1.1 </button>
-<button class="btn btn-main" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_hen()> HEN v2.1.3 </button>
-<button class="btn btn-main" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_hen2()> HEN-U </button>
-<button class="btn btn-main" onmouseover="mainpayload4()" onmouseout="pagetitle()" onclick=load_mira()> MIRA </button>
-<br><br>
-<h1 style="font-size:20px;text-align:center;">Payloads</h1>
-<button class="btn btn-main" onmouseover="todex()" onmouseout="pagetitle()" onclick=load_todex()> ToDex </button>
-<button class="btn btn-main" onmouseover="dumper()" onmouseout="pagetitle()" onclick=load_dumper()> Dumper </button>
-<button class="btn btn-main" onmouseover="ftp()" onmouseout="pagetitle()" onclick=load_ftp()> FTP </button>
-<button class="btn btn-main" onmouseover="binloader()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
+<h1 style="font-size:20px;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
+<button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen()> GoldHEN v1.1 </button>
+<button class="btn" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_hen_u()> HEN-U </button>
+<button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_hen()> HEN v2.1.3 </button>
+<button class="btn" onmouseover="mainpayload4()" onmouseout="pagetitle()" onclick=load_mira()> MIRA </button>
 <br>
-<button class="btn btn-main" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick=load_enablebUpdates()> Enable Updates </button>
-<button class="btn btn-main" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick=load_disableUpdates()> Disable Updates </button>
-<button class="btn btn-main" onmouseover="app2usb()" onmouseout="pagetitle()" onclick=load_app2usb()> App2USB </button>
-<button class="btn btn-main" onmouseover="enablevr()" onmouseout="pagetitle()" onclick=load_enablevr()> Enable VR </button>
+<h1 style="font-size:20px;">Payloads</h1>
+<button class="btn" onmouseover="todex()" onmouseout="pagetitle()" onclick=load_todex()> ToDex </button>
+<button class="btn" onmouseover="dumper()" onmouseout="pagetitle()" onclick=load_dumper()> Dumper </button>
+<button class="btn" onmouseover="ftp()" onmouseout="pagetitle()" onclick=load_ftp()> FTP </button>
+<button class="btn" onmouseover="binloader()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
 <br>
-<button class="btn btn-main" onmouseover="dbackup()" onmouseout="pagetitle()" onclick=load_dbackup()> DB Backup </button>
-<button class="btn btn-main" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick=load_dbrestore()> DB Restore </button>
-<button class="btn btn-main" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1GB </button>
-<button class="btn btn-main" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
+<button class="btn" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick=load_enablebUpdates()> Enable Updates </button>
+<button class="btn" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick=load_disableUpdates()> Disable Updates </button>
+<button class="btn" onmouseover="app2usb()" onmouseout="pagetitle()" onclick=load_app2usb()> App2USB </button>
+<button class="btn" onmouseover="enablevr()" onmouseout="pagetitle()" onclick=load_enablevr()> Enable VR </button>
 <br>
-<button class="btn btn-main" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
-<button class="btn btn-main" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
-<button class="btn btn-main" onmouseover="gtavmods()" onmouseout="pagetitle()" onclick=load_gtavmods()> GTA V Mods </button>
-<button class="btn btn-main" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
-<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<button class="btn btn-main" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> PS4 Debug </button>
-<button class="btn btn-main" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick=load_kernelClock()> Kernel Clock </button>
-<button class="btn btn-main" onmouseover="CE303916fix()" onmouseout="pagetitle()" onclick=load_CE303916fix()> CE-30391-6 Fix </button>
-<button class="btn btn-main" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C<br><br>
-<hr style="margin-top: 24px;">
-<h1 style="font-size:25px;text-align:center;margin-top: 15px;color:yellow;">Many Thanks to:&nbsp&nbsp<a href="https://twitter.com/sleirsgoevy" style="color:#f31414;">@sleirsgoevy</a>&nbsp&nbsp<a style="color:white;"></style>ChendoChap</a>&nbsp&nbsp<a style="color:white;"></style>SiSTRo</a>&nbsp&nbsp<a href="https://twitter.com/NazkyYT" style="color:#f31414;">@NazkyYT</a>&nbsp&nbsp<a href="https://twitter.com/salt13939424" style="color:#f31414;">@salt13939424</a>&nbsp&nbsp<a href="https://twitter.com/84Ciss" style="color:#f31414;">@84Ciss</a>&nbsp&nbsp<a href="https://twitter.com/mohammad_fadel1" style="color:#f31414;">@mohammad_fadel1</a>&nbsp&nbsp</h1>
+<button class="btn" onmouseover="dbackup()" onmouseout="pagetitle()" onclick=load_dbackup()> DB Backup </button>
+<button class="btn" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick=load_dbrestore()> DB Restore </button>
+<button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1GB </button>
+<button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
 <br>
+<button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
+<button class="btn" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
+<button class="btn" onmouseover="gtavmods()" onmouseout="pagetitle()" onclick=load_gtavmods_section()> GTA V Mods </button>
+<button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
+<br>
+<button style="margin-left: 73px;" class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
+<button class="btn" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> PS4 Debug </button>
+<button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick=load_kernelClock()> Kernel Clock </button>
+<button class="btn" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C<br><br>
+<hr style="margin-top: 65px;">
+<h1 style="margin-top: 15px;color:yellow;">Many Thanks to:&nbsp&nbsp<a href="https://twitter.com/sleirsgoevy" style="color:#f31414;">@sleirsgoevy</a>&nbsp&nbsp<a style="color:white;">ChendoChap&nbsp&nbspSiSTRo</a>&nbsp&nbsp<a href="https://twitter.com/NazkyYT" style="color:#f31414;">@NazkyYT</a>&nbsp&nbsp<a href="https://twitter.com/salt13939424" style="color:#f31414;">@salt13939424</a>&nbsp&nbsp<a href="https://twitter.com/84Ciss" style="color:#f31414;">@84Ciss</a>&nbsp&nbsp<a href="https://twitter.com/mohammad_fadel1" style="color:#f31414;">@mohammad_fadel1</a></h1>
+</div>
+<div id="mods-section">
+<h1 id=msgs-mods>GTA V Mods </h1>
+<hr>
+<br>
+<h1 style="font-size:20px;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
+<button class="btn" onmouseover="arabicGuy100()" onmouseout="pagetitle()" onclick=load_arabicGuy100()> Arabic Guy v1.00 </button>
+<button class="btn" onmouseover="arabicGuy127()" onmouseout="pagetitle()" onclick=load_arabicGuy127()> Arabic Guy v1.27 </button>
+<button class="btn" onmouseover="arabicGuy132()" onmouseout="pagetitle()" onclick=load_arabicGuy132()> Arabic Guy v1.32 </button>
+<button class="btn" onmouseover="home()" onmouseout="pagetitle()" onclick=close_section()> Return </button>
+<hr style="margin-top: 465px;">
+<h1 style="margin-top: 15px;color:yellow;">Many Thanks to:&nbsp&nbsp<a href="https://twitter.com/sleirsgoevy" style="color:#f31414;">@sleirsgoevy</a>&nbsp&nbsp<a style="color:white;">ChendoChap&nbsp&nbspSiSTRo</a>&nbsp&nbsp<a href="https://twitter.com/NazkyYT" style="color:#f31414;">@NazkyYT</a>&nbsp&nbsp<a href="https://twitter.com/salt13939424" style="color:#f31414;">@salt13939424</a>&nbsp&nbsp<a href="https://twitter.com/84Ciss" style="color:#f31414;">@84Ciss</a>&nbsp&nbsp<a href="https://twitter.com/mohammad_fadel1" style="color:#f31414;">@mohammad_fadel1</a></h1>
 </div>
 <script>
+function load_gtavmods_section(){
+document.getElementById("mods-section").style.display = "block";
+document.getElementById("main-section").style.display = "none";
+}
+
+function close_section(){
+document.getElementById("main-section").style.display = "block";
+document.getElementById("mods-section").style.display = "none";
+}
+
 function mainpayload1(){
 document.getElementById("msgs").innerHTML = "GoldHEN v1.1 for Firmware 7.02 (Includes Temporary Fix for CE-30391-6)";
 }
 function mainpayload2(){
-document.getElementById("msgs").innerHTML = "HEN v2.1.3 for Firmware 7.02";
+document.getElementById("msgs").innerHTML = "HEN + ToDex 0x80 (Includes Temporary Fix for CE-30391-6)";
 }
 function mainpayload3(){
-document.getElementById("msgs").innerHTML = "HEN + ToDex 0x80 (Includes Temporary Fix for CE-30391-6)";
+document.getElementById("msgs").innerHTML = "HEN v2.1.3 for Firmware 7.02";
 }
 function mainpayload4(){
 document.getElementById("msgs").innerHTML = "MIRA for Firmware 7.02";
@@ -153,10 +171,13 @@ function ps4trainer(){
 document.getElementById("msgs").innerHTML = "Link to PS4 Trainer Website (Follow Instructions There)";
 }
 function gtavmods(){
-document.getElementById("msgs").innerHTML = "Choose Desired Cheats for GTA V (Click Here to Load Subpage)";
+document.getElementById("msgs").innerHTML = "Choose Desired Cheats for GTA V (Click Here to Load Section)";
 }
 function historyBlocker(){
 document.getElementById("msgs").innerHTML = "Disable Browser History, it will only show Frequently used Pages once you open";
+}
+function webact(){
+document.getElementById("msgs").innerHTML = "Activate Your User Account from the Console Browser";
 }
 function ps4debug(){
 document.getElementById("msgs").innerHTML = "Activate Your User Account Offline";
@@ -164,14 +185,24 @@ document.getElementById("msgs").innerHTML = "Activate Your User Account Offline"
 function kernelClock(){
 document.getElementById("msgs").innerHTML = "Change the Time for the Console Kernel Clock";
 }
-function CE303916fix(){
-document.getElementById("msgs").innerHTML = "Temporary Fix for PS4 with Error CE-30391-6";
-}
 function fanthreshold(){
 document.getElementById("msgs").innerHTML = "Modify PS4 Fan Speed";
 }
+function arabicGuy100(){
+document.getElementById("msgs-mods").innerHTML = "GTA V Mod Arabic Guy v1.00 (L1 + R1)";
+}
+function arabicGuy127(){
+document.getElementById("msgs-mods").innerHTML = "GTA V Mod Arabic Guy v1.27 (L1 + R1)";
+}
+function arabicGuy132(){
+document.getElementById("msgs-mods").innerHTML = "GTA V Mod Arabic Guy v1.32 (L1 + R1)";
+}
+function home(){
+document.getElementById("msgs-mods").innerHTML = "Return to Main Section";
+}
 function pagetitle(){
 document.getElementById("msgs").innerHTML = "PS4 7.02 Host v1.4 by GamerHack";
+document.getElementById("msgs-mods").innerHTML = "GTA V Mods";
 }
 
 for(var i=50; i<=75; i=i+5){
@@ -190,6 +221,13 @@ function load_goldhen(){
         link.href = 'payload702.html#f=goldhen_1.1_702.js';
         link.click();
 }
+function load_hen_u(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload702.html#f=hen-U.js';
+        link.click();
+}
 function load_hen(){
 
   var link = document.createElement('a');
@@ -197,25 +235,11 @@ function load_hen(){
         link.href = 'payload702.html#f=hen213.js';
         link.click();
 }
-function load_hen2(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'payload702.html#f=hen-U.js';
-        link.click();
-}
 function load_mira(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
         link.href = 'payload702.html#f=mira2.js';
-        link.click();
-}
-function load_mirahen(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'payload702.html#f=mugimirahen.js';
         link.click();
 }
 function load_todex(){
@@ -330,6 +354,13 @@ function load_historyBlocker(){
         link.href = 'payload702.html#f=history-blocker.js';
         link.click();
 }
+function load_webact(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'web-activator.html';
+        link.click();
+}
 function load_ps4debug(){
 
   var link = document.createElement('a');
@@ -344,19 +375,38 @@ function load_kernelClock(){
         link.href = 'payload702.html#f=kernel-clock.js';
         link.click();
 }
-function load_CE303916fix(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'payload702.html#f=CE-30391-6_Fix.js';
-        link.click();
-}
 function load_fanthreshold(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
         link.href = "payload702.html#f=fan-threshold"+tempC.value+".js";
         link.click();
+}
+function load_arabicGuy100(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload702.html#f=arabic-guy100.js';
+        link.click();
+}
+function load_arabicGuy127(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload702.html#f=arabic-guy127.js';
+        link.click();
+}
+function load_arabicGuy132(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload702.html#f=arabic-guy132.js';
+        link.click();
+}
+
+var jailbreak_start_date = localStorage.getItem("jailbreak_start_date");
+if (jailbreak_start_date !== null) {
+  localStorage.removeItem("jailbreak_start_date");
 }
 </script>
 </body>
