@@ -39,6 +39,7 @@ fan-threshold60.js
 fan-threshold65.js
 fan-threshold70.js
 fan-threshold75.js
+frontend.js
 ftp.js
 goldhen_1.1_702.js
 hen213.js
@@ -57,3 +58,5 @@ payload702.html
 ps4.js
 todex.js
 utils.js
+web-activator.html
+web-activator.js
