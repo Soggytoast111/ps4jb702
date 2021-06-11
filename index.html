@@ -48,6 +48,12 @@ border-radius: 8px;
 .btn:hover {
 background-color: #0058b1;
 }
+.btn-toolbox {
+background-color: #ae2301;
+}
+.btn-toolbox:hover {
+background-color: #d42a01;
+}
 </style>
 <script>
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
@@ -86,11 +92,13 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="gtavmods()" onmouseout="pagetitle()" onclick=load_gtavmods_section()> GTA V Mods </button>
 <button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
 <br>
-<button style="margin-left: 73px;" class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
+<button style="margin-left: 78px;" class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
 <button class="btn" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> PS4 Debug </button>
 <button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick=load_kernelClock()> Kernel Clock </button>
-<button class="btn" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C<br><br>
-<hr style="margin-top: 65px;">
+<button class="btn" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C
+<br>
+<button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
+<hr style="margin-top: 21px;">
 <h1 style="margin-top: 15px;color:yellow;">Many Thanks to:&nbsp&nbsp<a href="https://twitter.com/sleirsgoevy" style="color:#f31414;">@sleirsgoevy</a>&nbsp&nbsp<a style="color:white;">ChendoChap&nbsp&nbspSiSTRo</a>&nbsp&nbsp<a href="https://twitter.com/NazkyYT" style="color:#f31414;">@NazkyYT</a>&nbsp&nbsp<a href="https://twitter.com/salt13939424" style="color:#f31414;">@salt13939424</a>&nbsp&nbsp<a href="https://twitter.com/84Ciss" style="color:#f31414;">@84Ciss</a>&nbsp&nbsp<a href="https://twitter.com/mohammad_fadel1" style="color:#f31414;">@mohammad_fadel1</a></h1>
 </div>
 <div id="mods-section">
@@ -110,12 +118,10 @@ function load_gtavmods_section(){
 document.getElementById("mods-section").style.display = "block";
 document.getElementById("main-section").style.display = "none";
 }
-
 function close_section(){
 document.getElementById("main-section").style.display = "block";
 document.getElementById("mods-section").style.display = "none";
 }
-
 function mainpayload1(){
 document.getElementById("msgs").innerHTML = "GoldHEN v1.1 for Firmware 7.02 (Includes Temporary Fix for CE-30391-6)";
 }
@@ -170,6 +176,9 @@ document.getElementById("msgs").innerHTML = "Required to Activate Cheats Through
 function ps4trainer(){
 document.getElementById("msgs").innerHTML = "Link to PS4 Trainer Website (Follow Instructions There)";
 }
+function orbistoolbox(){
+document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha Build 1167 for Firmware 7.55";
+}
 function gtavmods(){
 document.getElementById("msgs").innerHTML = "Choose Desired Cheats for GTA V (Click Here to Load Section)";
 }
@@ -187,6 +196,9 @@ document.getElementById("msgs").innerHTML = "Change the Time for the Console Ker
 }
 function fanthreshold(){
 document.getElementById("msgs").innerHTML = "Modify PS4 Fan Speed";
+}
+function orbistoolbox(){
+document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha Build 1167";
 }
 function arabicGuy100(){
 document.getElementById("msgs-mods").innerHTML = "GTA V Mod Arabic Guy v1.00 (L1 + R1)";
@@ -358,7 +370,7 @@ function load_webact(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
-        link.href = 'web-activator.html';
+        link.href = 'WebActivator/web-activator.html';
         link.click();
 }
 function load_ps4debug(){
@@ -380,6 +392,13 @@ function load_fanthreshold(){
   var link = document.createElement('a');
         document.body.appendChild(link);
         link.href = "payload702.html#f=fan-threshold"+tempC.value+".js";
+        link.click();
+}
+function load_toolbox(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload702.html#f=Orbis-Toolbox-702.js';
         link.click();
 }
 function load_arabicGuy100(){
