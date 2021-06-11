@@ -14,6 +14,16 @@ PS4Debug/ps4debug.js
 PS4Debug/rop.js
 PS4Debug/userland.js
 PS4Debug/utils.js
+WebActivator/702.js
+WebActivator/c-code.js
+WebActivator/frontend.js
+WebActivator/int64.js
+WebActivator/jb.js
+WebActivator/mira.js
+WebActivator/ps4.js
+WebActivator/utils.js
+WebActivator/web-activator.html
+WebActivator/web-activator.js
 WebRTE/index.html
 WebRTE/int64.js
 WebRTE/ps4.js
@@ -39,7 +49,6 @@ fan-threshold60.js
 fan-threshold65.js
 fan-threshold70.js
 fan-threshold75.js
-frontend.js
 ftp.js
 goldhen_1.1_702.js
 hen213.js
@@ -54,9 +63,8 @@ linux702-1gb.js
 linux702-3gb.js
 mira.js
 mira2.js
+Orbis-Toolbox-702.js
 payload702.html
 ps4.js
 todex.js
 utils.js
-web-activator.html
-web-activator.js
