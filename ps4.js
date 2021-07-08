@@ -323,8 +323,9 @@ function handle2() {
 
 function reuseTargetObj() {
 	/* Delete ValidationMessage instance */
+	debug_log("[+] Before deleted validation message")
 	document.body.appendChild(g_input);
-
+	debug_log("[+] After deleted validation message")
 	/*
 	 * Free ValidationMessage neighboors.
 	 * SmallLine is freed -> SmallPage is cached
